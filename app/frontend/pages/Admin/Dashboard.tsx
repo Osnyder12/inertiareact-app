@@ -14,8 +14,12 @@ export default function InertiaExample({ name }: { name: string }) {
         <h1 className={cs.h1}>Admin {name}</h1>
 
         <div className="card">
+          <p>{count}</p>
           <button className={cs.button} onClick={() => setCount((count) => count + 1)}>
-            count is {count}
+            increase count
+          </button>
+          <button className={cs.button} onClick={() => setCount((count) => count - 1)}>
+            decrease count
           </button>
         </div>
       </div>
