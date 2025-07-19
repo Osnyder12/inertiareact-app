@@ -7,3 +7,10 @@
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
+
+
+Advisor.create!([
+  { name: 'Alice Johnson', title: 'Senior Advisor' },
+  { name: 'Bob Smith', title: 'Financial Consultant' },
+  { name: 'Carol Lee', title: 'Strategy Advisor' }
+])

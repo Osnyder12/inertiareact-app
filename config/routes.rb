@@ -11,4 +11,6 @@ Rails.application.routes.draw do
   namespace :admin do
     get 'dashboard', to: 'dashboard#index'
   end
+
+  get 'advisors', to: 'advisors#index'
 end

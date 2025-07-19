@@ -22,4 +22,11 @@ def last_30_days(transactions)
 end
 
 
-last_30_days(data)
+last_30 = last_30_days(data)
+puts "last 30 sum #{last_30}"
+
+
+# class Transaction < ApplicationRecord
+#   scope :large_transactions, -> { where('amount >= ?', 10_000) }
+# end
+
