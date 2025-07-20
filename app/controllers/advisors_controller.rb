@@ -1,6 +1,6 @@
 class AdvisorsController < ApplicationController
   def index
-    advisors = Advisor.AdvisorsController
+    advisors = Advisor.all
     render inertia: 'Advisors', props: {
       advisors: advisors
     }
