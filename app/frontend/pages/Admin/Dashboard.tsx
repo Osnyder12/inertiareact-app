@@ -1,4 +1,4 @@
-import { Head } from "@inertiajs/react";
+import { Head, Link } from "@inertiajs/react";
 import { useState } from "react";
 
 import cs from "./Dashboard.module.css";
@@ -21,6 +21,9 @@ export default function InertiaExample({ name }: { name: string }) {
           <button className={cs.button} onClick={() => setCount((count) => count - 1)}>
             decrease count
           </button>
+        </div>
+        <div className="card">
+          <Link href="/advisors">Link to Advisors Page</Link>
         </div>
       </div>
     </>
