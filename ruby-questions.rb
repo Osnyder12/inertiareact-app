@@ -66,3 +66,23 @@ puts reverse_sentences_in_paragraph(sentence_two)
   
   expect(output.split(.).first).to eq('rails from hello')
 # end
+
+
+# If we list all the natural numbers below 10 that are multiples of 3 or 5, we get 3, 5, 6 and 9.
+# The sum of these multiples is 23.
+
+# Finish the solution so that it returns the sum of all the multiples of 3 or 5 below the number passed in.
+
+def solution(number)
+  array = []
+  x = number - 1
+  while x >= 0
+    if x % 3 == 0 || x % 5 == 0
+    array << x
+  end
+    x -= 1
+  end
+  array.sum
+end
+
+puts solution(10)
