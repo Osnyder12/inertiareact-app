@@ -73,16 +73,23 @@ puts reverse_sentences_in_paragraph(sentence_two)
 
 # Finish the solution so that it returns the sum of all the multiples of 3 or 5 below the number passed in.
 
+# def solution(number)
+#   array = []
+#   x = number - 1
+#   while x >= 0
+#     if x % 3 == 0 || x % 5 == 0
+#     array << x
+#   end
+#     x -= 1
+#   end
+#   array.sum
+# end
+
+# refactor
 def solution(number)
-  array = []
   x = number - 1
-  while x >= 0
-    if x % 3 == 0 || x % 5 == 0
-    array << x
-  end
-    x -= 1
-  end
-  array.sum
+  nums = (1..x).select { |n| n % 3 == 0 || n % 5 == 0 }
+  nums.sum
 end
 
 puts solution(10)
