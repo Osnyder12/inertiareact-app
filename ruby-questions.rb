@@ -98,14 +98,24 @@ puts reverse_sentences_in_paragraph(sentence_two)
 # Write a function that accepts an integer argument n and generates an array
 # containing the pairs of integers [a, b] that satisfy the condition
 # 0 <= a <= b <= n
-def generate_pairs(n)
-  array = []
-  (0..n).each do |i|
-    (i..n).each do |b|
-      array << [i, b]
-    end
-  end
-  array
+# def generate_pairs(n)
+#   array = []
+#   (0..n).each do |i|
+#     (i..n).each do |b|
+#       array << [i, b]
+#     end
+#   end
+#   array
+# end
+
+# puts generate_pairs(4)
+
+# write a method to remove the smallest number from an array
+# do not mutate the arrays order
+def remove_smallest(numbers)
+  min_number = numbers.min
+  index_of_min = numbers.index(min_number)
+  numbers.reject.with_index { |n, i| i == index_of_min }
 end
 
-puts generate_pairs(4)
+puts remove_smallest([3, 2, 9, 7])

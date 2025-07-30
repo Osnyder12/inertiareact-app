@@ -13,4 +13,6 @@ Rails.application.routes.draw do
   end
 
   get 'advisors', to: 'advisors#index'
+
+  resources :posts
 end
