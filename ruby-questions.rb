@@ -86,10 +86,26 @@ puts reverse_sentences_in_paragraph(sentence_two)
 # end
 
 # refactor
-def solution(number)
-  x = number - 1
-  nums = (1..x).select { |n| n % 3 == 0 || n % 5 == 0 }
-  nums.sum
+# def solution(number)
+#   x = number - 1
+#   nums = (1..x).select { |n| n % 3 == 0 || n % 5 == 0 }
+#   nums.sum
+# end
+
+# puts solution(10)
+
+
+# Write a function that accepts an integer argument n and generates an array
+# containing the pairs of integers [a, b] that satisfy the condition
+# 0 <= a <= b <= n
+def generate_pairs(n)
+  array = []
+  (0..n).each do |i|
+    (i..n).each do |b|
+      array << [i, b]
+    end
+  end
+  array
 end
 
-puts solution(10)
+puts generate_pairs(4)
