@@ -29,17 +29,4 @@ class PostsController < ApplicationController
       post.post_hash
     end
   end
-
-  # def post_hash(post)
-  #   {
-  #     id: post.id,
-  #     title: post.title,
-  #     content: post.content,
-  #     advisor: {
-  #       id: post.advisor.id,
-  #       name: post.advisor.name,
-  #       title: post.advisor.title
-  #     }
-  #   }
-  # end
 end
