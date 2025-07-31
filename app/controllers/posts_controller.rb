@@ -10,7 +10,7 @@ class PostsController < ApplicationController
 
   def show
     render inertia: 'Posts/Show', props: {
-      post: post_hash(@post)
+      post: @post.post_hash
     }
   end
 
@@ -26,20 +26,20 @@ class PostsController < ApplicationController
 
   def serialized_posts
     @posts.map do |post|
-      post_hash(post)
+      post.post_hash
     end
   end
 
-  def post_hash(post)
-    {
-      id: post.id,
-      title: post.title,
-      content: post.content,
-      advisor: {
-        id: post.advisor.id,
-        name: post.advisor.name,
-        title: post.advisor.title
-      }
-    }
-  end
+  # def post_hash(post)
+  #   {
+  #     id: post.id,
+  #     title: post.title,
+  #     content: post.content,
+  #     advisor: {
+  #       id: post.advisor.id,
+  #       name: post.advisor.name,
+  #       title: post.advisor.title
+  #     }
+  #   }
+  # end
 end
