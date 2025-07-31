@@ -1,4 +1,5 @@
 import { usePage } from "@inertiajs/react";
+import { useState } from "react";
 
 interface Post {
   id: number;
@@ -20,12 +21,18 @@ interface PageProps {
 
 const PostsShow: React.FC = () => {
   const { post } = usePage<PageProps>().props;
+  const [content, setContent] = useState<string | null>(null);
+
+  const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
+    content === null ? setContent(post.content) : setContent(null);
+  };
 
   return (
     <div>
-      <h1>
+      <h1 onClick={handleClick}>
         {post.title}: {post.advisor.name}
       </h1>
+      {content ? <p>{content}</p> : null}
     </div>
   );
 };
