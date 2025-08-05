@@ -43,17 +43,17 @@ sentence = "hello from rails"
 # puts array_of_words.reverse.join(' ')
 
 
-sentence_two = "hello from rails. this is the second sentence. heres another one."
+# sentence_two = "hello from rails. this is the second sentence. heres another one."
 
-def reverse_sentences_in_paragraph(paragraph)
-  sentences = paragraph.split('.')
+# def reverse_sentences_in_paragraph(paragraph)
+#   sentences = paragraph.split('.')
 
-  new_sentences = sentences.map { |s| s.split(' ').reverse.join(' ') }.join('. ')
+#   new_sentences = sentences.map { |s| s.split(' ').reverse.join(' ') }.join('. ')
 
-  new_sentences + "."
-end
+#   new_sentences + "."
+# end
 
-puts reverse_sentences_in_paragraph(sentence_two)
+# puts reverse_sentences_in_paragraph(sentence_two)
 
 # what does this method do
 # it takes in a paragraph and returns each sentence reversed (ex. last word in sentence is now the first word)
@@ -62,9 +62,9 @@ puts reverse_sentences_in_paragraph(sentence_two)
 # end
 
 # it 'reverses each sentence in the paragraph' do
-  output = reverse_sentences_in_paragraph(sentence_two)
+  # output = reverse_sentences_in_paragraph(sentence_two)
   
-  expect(output.split(.).first).to eq('rails from hello')
+  # expect(output.split(.).first).to eq('rails from hello')
 # end
 
 
