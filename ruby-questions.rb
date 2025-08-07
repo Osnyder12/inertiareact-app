@@ -112,10 +112,10 @@ sentence = "hello from rails"
 
 # write a method to remove the smallest number from an array
 # do not mutate the arrays order
-def remove_smallest(numbers)
-  min_number = numbers.min
-  index_of_min = numbers.index(min_number)
-  numbers.reject.with_index { |n, i| i == index_of_min }
-end
+# def remove_smallest(numbers)
+#   min_number = numbers.min
+#   index_of_min = numbers.index(min_number)
+#   numbers.reject.with_index { |n, i| i == index_of_min }
+# end
 
-puts remove_smallest([3, 2, 9, 7])
+# puts remove_smallest([3, 2, 9, 7])
