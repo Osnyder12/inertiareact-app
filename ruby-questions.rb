@@ -142,8 +142,8 @@ def two_sum(numbers, target)
   numbers.each_with_index do |n, i|
     complement = target - n 
     if seen.key?(complement)
-      return [seen[complement], index]
+      return [seen[complement], i]
     end
-    seen[num] = index
+    seen[n] = i
   end
 end
