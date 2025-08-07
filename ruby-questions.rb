@@ -119,3 +119,31 @@ sentence = "hello from rails"
 # end
 
 # puts remove_smallest([3, 2, 9, 7])
+
+# write a function that takes an array of numbers and a target and
+# find the index of 2 numbers in the array whose sum equals the target number
+# def two_sum(numbers, target)
+#   array = []
+#   numbers.each_with_index do |n, i|
+#     numbers.each_with_index do |m, index|
+#       next if i == index
+#       if n + m == target
+#         return [i, index]
+#         break
+#       end
+#     end
+#   end
+# end
+
+# refactor
+
+def two_sum(numbers, target)
+  seen = {}
+  numbers.each_with_index do |n, i|
+    complement = target - n 
+    if seen.key?(complement)
+      return [seen[complement], index]
+    end
+    seen[num] = index
+  end
+end
